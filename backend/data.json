@@ -1,0 +1,11 @@
+{ 
+  "name": "Shaik Jameer", 
+  "referralCode": "jameer2025", 
+  "totalDonations": 1200, 
+  "rewards": ["Badge: First Donation", "Certificate: Bronze Supporter"], 
+  "leaderboard": [ 
+    { "name": "John Doe", "donations": 2000 }, 
+    { "name": "Shaik Jameer", "donations": 1200 }, 
+    { "name": "Alice Smith", "donations": 900 } 
+  ] 
+} 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaderboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Leaderboard</h1>
+    <ul id="leaderboard"></ul>
+    <a href="dashboard.html">Back to Dashboard</a>
+  </div>
+
+  <script>
+    fetch("http://localhost:5000/api/leaderboard")
+      .then(res => res.json())
+      .then(data => {
+        const list = document.getElementById("leaderboard");
+        data.forEach(player => {
+          const li = document.createElement("li");
+          li.textContent = `${player.name} - ₹${player.donations}`;
+          list.appendChild(li);
+        });
+      });
+  </script>
+</body>
+</html>
